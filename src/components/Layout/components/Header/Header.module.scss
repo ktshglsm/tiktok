@@ -13,7 +13,10 @@
     align-items: center;
     justify-content: space-between;
 }
+.search-result{
+    width: 361px;
 
+}
 .search {
     width: 361px;
     height: 46px;
@@ -48,6 +51,12 @@
         background-color: #b0b0b4;
     }
 }
+.search-title{
+    font-size: 1.4rem;
+    font-weight: 600;
+    color: #7a7a8d;
+    padding: 5px 16px;
+}
 .clear,
 .loading {
     position: absolute;
@@ -66,7 +75,7 @@
     font-size: 1.8rem;
     &:hover {
         cursor: pointer;
-        background-color: rgba(22, 24, 35, 0.03);
+        background-color: rgba(9, 9, 14, 0.03);
     }
     &:active {
         cursor: pointer;
