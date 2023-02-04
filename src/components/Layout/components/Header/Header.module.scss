@@ -17,74 +17,7 @@
     align-items: center;
     justify-content: space-between;
 }
-.search-result {
-    width: 361px;
-}
-.search {
-    width: 361px;
-    height: 46px;
-    padding-left: 16px;
-    border-radius: 92px;
-    border: 1.5px solid transparent;
-    position: relative;
-    display: flex;
-    align-items: center;
-    background-color: rgba(22, 24, 35, 0.06);
 
-    input {
-        flex: 1;
-        font-size: 1.6rem;
-        height: 90%;
-        caret-color: var(--primary);
-        background-color: transparent;
-    }
-    input:not(:placeholder-shown) ~ .search-btn {
-        color: rgba(22, 24, 35, 0.75);
-    }
-    &:focus-within {
-        border: 1.5px solid #98989c;
-    }
-    &::after {
-        content: '';
-        position: absolute;
-        top: 9px;
-        right: 46px;
-        height: 28px;
-        width: 1px;
-        background-color: #b0b0b4;
-    }
-}
-.search-title {
-    font-size: 1.4rem;
-    font-weight: 600;
-    color: #7a7a8d;
-    padding: 5px 16px;
-}
-.clear,
-.loading {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    right: 62px;
-
-    color: rgba(22, 24, 35, 0.34);
-}
-.search-btn {
-    width: 46px;
-    height: 100%;
-    border-top-right-radius: 92px;
-    border-bottom-right-radius: 92px;
-    color: #b0b0b4;
-    font-size: 1.8rem;
-    &:hover {
-        cursor: pointer;
-        background-color: rgba(9, 9, 14, 0.03);
-    }
-    &:active {
-        cursor: pointer;
-        background-color: rgba(2, 3, 12, 0.03);
-    }
-}
 
 .menu-icon {
     font-size: 2rem;
@@ -100,15 +33,16 @@
 }
 .action-icon {
     background-color: transparent;
-    font-size: 2rem;
+    font-size: 2.6rem;
     padding: 4px;
-    margin-right: 10px;
+    margin-left:  20px;
+    display: flex;
 }
 .menu-avatar {
     width: 32px;
     height: 32px;
     object-fit: cover;
     border-radius: 50%;
-    margin-left: 8px;
+    margin-left: 20px;
     
 }
