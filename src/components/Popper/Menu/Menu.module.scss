@@ -1,0 +1,38 @@
+.menu-items{
+    width: 224px;
+    
+}
+.wrapper{
+    padding: 3px 5px;
+    font-size: 1.7rem;
+    
+    
+    &:hover{
+        background-color: rgb(247, 245, 245);
+    }
+}
+
+.menu-popper{
+    padding-bottom: 8px;
+}
+
+
+
+.header{
+    display: flex;
+    position: relative;
+    height: 42px;
+}
+.header-icon{
+    background-color: transparent;
+    padding: 0 20px;
+
+}
+.header-title{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    font-weight: 500;
+
+}
