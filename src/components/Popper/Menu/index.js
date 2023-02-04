@@ -15,7 +15,7 @@ function Menu({ children, items = [] }) {
         setHistory((prev) => [...prev, { data: data, title: title }]);
     }
     function getItem(item) {
-        console.log(item)
+        console.log(item);
     }
     function onBack() {
         setHistory((prev) => prev.slice(0, prev.length - 1));
@@ -23,7 +23,8 @@ function Menu({ children, items = [] }) {
     return (
         <Tippy
             interactive
-            visible
+            delay={[0,700]}
+            offset={[15,10]}
             placement="bottom-end"
             render={(attrs) => (
                 <div className={cx('menu-items')} tabIndex="-1" {...attrs}>
@@ -36,6 +37,7 @@ function Menu({ children, items = [] }) {
                                     icon={item.icon}
                                     content={item.content}
                                     to={item.to}
+                                    separate={item.separate}
                                     onClick={() =>
                                         !!item.children
                                             ? handleHasChildren(item.children.data, item.children.title)
@@ -47,6 +49,7 @@ function Menu({ children, items = [] }) {
                     </PopperWrapper>
                 </div>
             )}
+            onHide={() => setHistory((prev) => prev.slice(0, 1))}
         >
             {children}
         </Tippy>

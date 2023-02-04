@@ -24,7 +24,7 @@ function Button({
         small,
         large,
         normal,
-        transparent
+        transparent,
     });
     const props = {
         onClick,

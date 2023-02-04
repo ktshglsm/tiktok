@@ -26,6 +26,7 @@
 .header-icon{
     background-color: transparent;
     padding: 0 20px;
+    cursor: pointer;
 
 }
 .header-title{
@@ -35,4 +36,7 @@
     transform: translate(-50%,-50%);
     font-weight: 500;
 
+}
+.separate{
+    border-top:1px solid #ebe9e9 ;
 }

@@ -5,10 +5,13 @@ import Button from '~/components/Button';
 import styles from './Menu.module.scss';
 const cx = classNames.bind(styles);
 
-function MenuItem({ icon, content, to ,onClick}) {
+function MenuItem({ icon, content, to ,onClick , separate=false}) {
+    const classes=cx('wrapper',{
+        separate
+    })
     return (
-        <div className={cx('wrapper')}>
-            <Button leftIcon={icon} to={to} transparent onClick={onClick}>
+        <div className={classes}>
+            <Button leftIcon={icon} to={to} transparent onClick={onClick} >
                 {content}
             </Button>
         </div>
