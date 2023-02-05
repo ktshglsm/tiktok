@@ -15,13 +15,16 @@
 .menu-popper{
     padding-bottom: 8px;
 }
-
+.menu-content{
+    overflow-y: auto;
+}
 
 
 .header{
     display: flex;
     position: relative;
     height: 42px;
+    flex-shrink: 0;
 }
 .header-icon{
     background-color: transparent;

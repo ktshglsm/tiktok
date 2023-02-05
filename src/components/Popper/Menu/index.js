@@ -30,22 +30,24 @@ function Menu({ children, items = [] }) {
                 <div className={cx('menu-items')} tabIndex="-1" {...attrs}>
                     <PopperWrapper className={cx('menu-popper')}>
                         {!!current.title && <Header title={current.title} onClick={() => onBack()} />}
-                        {current.data.map((item, index) => {
-                            return (
-                                <MenuItem
-                                    key={index}
-                                    icon={item.icon}
-                                    content={item.content}
-                                    to={item.to}
-                                    separate={item.separate}
-                                    onClick={() =>
-                                        !!item.children
-                                            ? handleHasChildren(item.children.data, item.children.title)
-                                            : getItem(item)
-                                    }
-                                />
-                            );
-                        })}
+                        <div className={cx('menu-content')}>
+                            {current.data.map((item, index) => {
+                                return (
+                                    <MenuItem
+                                        key={index}
+                                        icon={item.icon}
+                                        content={item.content}
+                                        to={item.to}
+                                        separate={item.separate}
+                                        onClick={() =>
+                                            !!item.children
+                                                ? handleHasChildren(item.children.data, item.children.title)
+                                                : getItem(item)
+                                        }
+                                    />
+                                );
+                            })}
+                        </div>
                     </PopperWrapper>
                 </div>
             )}

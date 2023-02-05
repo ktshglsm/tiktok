@@ -38,6 +38,94 @@ const MENU_LIST = [
                     code: 'vi',
                     content: 'Vietnamese',
                 },
+                {
+                    code: 'en',
+                    content: 'English',
+                },
+                {
+                    code: 'vi',
+                    content: 'Vietnamese',
+                },
+                {
+                    code: 'en',
+                    content: 'English',
+                },
+                {
+                    code: 'vi',
+                    content: 'Vietnamese',
+                },
+                {
+                    code: 'en',
+                    content: 'English',
+                },
+                {
+                    code: 'vi',
+                    content: 'Vietnamese',
+                },
+                {
+                    code: 'en',
+                    content: 'English',
+                },
+                {
+                    code: 'vi',
+                    content: 'Vietnamese',
+                },
+                {
+                    code: 'en',
+                    content: 'English',
+                },
+                {
+                    code: 'vi',
+                    content: 'Vietnamese',
+                },
+                {
+                    code: 'en',
+                    content: 'English',
+                },
+                {
+                    code: 'vi',
+                    content: 'Vietnamese',
+                },
+                {
+                    code: 'en',
+                    content: 'English',
+                },
+                {
+                    code: 'vi',
+                    content: 'Vietnamese',
+                },
+                {
+                    code: 'en',
+                    content: 'English',
+                },
+                {
+                    code: 'vi',
+                    content: 'Vietnamese',
+                },
+                {
+                    code: 'en',
+                    content: 'English',
+                },
+                {
+                    code: 'vi',
+                    content: 'Vietnamese',
+                },
+                {
+                    code: 'en',
+                    content: 'English',
+                },
+                {
+                    code: 'vi',
+                    content: 'Vietnamese',
+                },
+                {
+                    code: 'en',
+                    content: 'English',
+                },
+                {
+                    code: 'vi',
+                    content: 'Vietnamese',
+                },
             ],
         },
     },
@@ -60,7 +148,7 @@ function Header() {
                 <div className={cx('logo')}>
                     <img src={images.logo} alt="toptop" />
                 </div>
-                <Search/>
+                <Search />
                 <div className={cx('actions')}>
                     {currentUser ? (
                         <>
