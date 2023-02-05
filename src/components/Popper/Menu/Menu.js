@@ -21,45 +21,51 @@ function Menu({ children, items = [] }) {
     function onBack() {
         setHistory((prev) => prev.slice(0, prev.length - 1));
     }
+    const renderMenu = (attrs) => (
+        <div className={cx('menu-items')} tabIndex="-1" {...attrs}>
+            <PopperWrapper className={cx('menu-popper')}>
+                {!!current.title && <Header title={current.title} onClick={() => onBack()} />}
+                <div className={cx('menu-content')}>
+                    {current.data.map((item, index) => {
+                        return (
+                            <MenuItem
+                                key={index}
+                                icon={item.icon}
+                                content={item.content}
+                                to={item.to}
+                                separate={item.separate}
+                                onClick={() =>
+                                    !!item.children
+                                        ? handleHasChildren(item.children.data, item.children.title)
+                                        : getItem(item)
+                                }
+                            />
+                        );
+                    })}
+                </div>
+            </PopperWrapper>
+        </div>
+    );
+
+    const handleReset = () => {
+        setHistory((prev) => prev.slice(0, 1));
+    };
+
     return (
         <Tippy
             interactive
-            delay={[0,700]}
-            offset={[15,10]}
+            delay={[0, 700]}
+            offset={[15, 10]}
             placement="bottom-end"
-            render={(attrs) => (
-                <div className={cx('menu-items')} tabIndex="-1" {...attrs}>
-                    <PopperWrapper className={cx('menu-popper')}>
-                        {!!current.title && <Header title={current.title} onClick={() => onBack()} />}
-                        <div className={cx('menu-content')}>
-                            {current.data.map((item, index) => {
-                                return (
-                                    <MenuItem
-                                        key={index}
-                                        icon={item.icon}
-                                        content={item.content}
-                                        to={item.to}
-                                        separate={item.separate}
-                                        onClick={() =>
-                                            !!item.children
-                                                ? handleHasChildren(item.children.data, item.children.title)
-                                                : getItem(item)
-                                        }
-                                    />
-                                );
-                            })}
-                        </div>
-                    </PopperWrapper>
-                </div>
-            )}
-            onHide={() => setHistory((prev) => prev.slice(0, 1))}
+            render={renderMenu}
+            onHide={handleReset}
         >
             {children}
         </Tippy>
     );
 }
-Menu.propTypes={
-    children:PropTypes.node,
-    items:PropTypes.array.isRequired
-}
+Menu.propTypes = {
+    children: PropTypes.node,
+    items: PropTypes.array.isRequired,
+};
 export default Menu;
