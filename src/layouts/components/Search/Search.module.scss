@@ -18,6 +18,7 @@
         height: 90%;
         caret-color: var(--primary);
         background-color: transparent;
+        padding-right: 40px;
     }
     input:not(:placeholder-shown) ~ .search-btn {
         color: rgba(22, 24, 35, 0.75);
@@ -49,9 +50,8 @@
     transform: translateY(-50%);
     color: rgba(22, 24, 35, 0.34);
 }
-.loading{
+.loading {
     animation: spinner 1s linear infinite;
-
 }
 @keyframes spinner {
     from {
