@@ -1,0 +1,48 @@
+.wrapper{
+    width: 320px;
+    height: 160px;
+    padding: 12px 20px 0 20px;
+}
+.title{
+    margin-bottom: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.avatar{
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    cursor: pointer;
+}
+.info{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.name{
+    font-size: 1.8rem;
+    line-height: 1;
+    cursor: pointer;
+}
+.check{
+    font-size: 1.4rem;
+    color: rgb(32, 213, 236);
+    margin-left: 4px;
+
+}
+.username{
+    font-size: 1.4rem;
+    cursor: pointer;
+}
+.more{
+    font-size: 1.7rem;
+    margin-top: 8px;
+    display: flex;
+}
+.follower{
+    margin-right: 12px;
+}
+.total{
+    margin-right: 3px;
+}

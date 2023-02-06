@@ -1,6 +1,30 @@
-.wrapper{
+.wrapper {
     width: 356px;
-    padding-right: 8px;
-    
-}
+    padding: 20px 0 26px 8px;
+    height: 900px;
+    overflow-y: auto;
 
+    position: fixed;
+
+    &::-webkit-scrollbar-thumb {
+        border-radius: 4px;
+        background-color: transparent;
+    }
+
+    &:hover {
+        &::-webkit-scrollbar {
+            border-radius: 0;
+            width: 8px;
+            
+        }
+        &::-webkit-scrollbar-thumb {
+            border-radius: 4px;
+            background-color: rgba(22, 24, 35, 0.06);
+        }
+        &::-webkit-scrollbar-track {
+            border-radius: 0;
+            background-color: rgba(0, 0, 0, 0);
+            
+        }
+    }
+}

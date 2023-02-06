@@ -1,0 +1,92 @@
+.wrapper {
+    width: 692px;
+    display: flex;
+    padding: 20px 0;
+    position: relative;
+}
+.follow-btn {
+    position: absolute;
+    right: 40px;
+    top: 28px;
+    
+}
+.avatar {
+    width: 56px;
+    height: 56px;
+    border-radius: 50%;
+}
+.info {
+    margin-left: 12px;
+}
+.full-nickname {
+    display: flex;
+}
+.name {
+    font-size: 1.8rem;
+    font-weight: 700;
+}
+.check {
+    margin-left: 6px;
+    color: rgb(32, 213, 236);
+    font-size: 1.4rem;
+}
+.username {
+    font-size: 1.4rem;
+    font-weight: 400;
+    margin-left: 5px;
+    padding-top: 4px;
+}
+.cap {
+    display: flex;
+    flex-direction: column;
+}
+.title {
+    font-size: 1.6rem;
+    font-weight: 400;
+    padding: 3px 0;
+}
+.music {
+    font-size: 1.6rem;
+    font-weight: 700;
+}
+.music-name {
+    margin-left: 5px;
+}
+.video-detail {
+    margin-left: 12px;
+    margin-top: 10px;
+    display: flex;
+}
+.video {
+    width: 306px;
+    height: auto;
+    border-radius: 10px;
+}
+.video-statistic {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    margin-left: 20px;
+}
+.video-icon {
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    background-color: #f1f1f2;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+}
+.like{
+    color: var(--primary);
+}
+.video-total {
+    font-size: 1.2rem;
+    text-align: center;
+}
+.icon {
+    width: 24px;
+    height: 24px;
+    
+}

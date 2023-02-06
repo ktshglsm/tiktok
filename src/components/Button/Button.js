@@ -11,8 +11,9 @@ function Button({
     outline = false,
     small = false,
     large = false,
-    normal=false,
-    transparent=false,
+    normal = false,
+    normalBorder = false,
+    transparent = false,
     leftIcon,
     rightIcon,
     children,
@@ -25,6 +26,7 @@ function Button({
         small,
         large,
         normal,
+        normalBorder,
         transparent,
     });
     const props = {
@@ -43,23 +45,22 @@ function Button({
             {leftIcon && <span className={cx('left-icon')}>{leftIcon}</span>}
             <span className={cx('content')}>{children}</span>
             {rightIcon && <span className={cx('right-icon')}>{rightIcon}</span>}
-
         </Comp>
     );
 }
-Button.propTypes={
-    to:PropTypes.string,
-    href:PropTypes.string,
-    onClick:PropTypes.func,
-    primary:PropTypes.bool,
-    outline:PropTypes.bool,
-    small:PropTypes.bool,
-    large:PropTypes.bool,
-    normal:PropTypes.bool,
-    transparent:PropTypes.bool,
-    leftIcon:PropTypes.node,
-    rightIcon:PropTypes.node,
-    children:PropTypes.node.isRequired,
-}
+Button.propTypes = {
+    to: PropTypes.string,
+    href: PropTypes.string,
+    onClick: PropTypes.func,
+    primary: PropTypes.bool,
+    outline: PropTypes.bool,
+    small: PropTypes.bool,
+    large: PropTypes.bool,
+    normal: PropTypes.bool,
+    transparent: PropTypes.bool,
+    leftIcon: PropTypes.node,
+    rightIcon: PropTypes.node,
+    children: PropTypes.node.isRequired,
+};
 
 export default Button;
