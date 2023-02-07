@@ -9,7 +9,7 @@ import Live from '~/pages/Live/Live';
 const publicRoutes = [
     { path: '/', element: Home },
     { path: '/following', element: Following },
-    { path: '/@:nickname', element: Profile },
+    { path: '/:nickname', element: Profile },
     { path: '/live', element: Live },
 
     { path: '/upload', element: Upload, layout: HeaderOnly },
